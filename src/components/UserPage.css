@@ -1,0 +1,107 @@
+.Profile {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.navigation {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 75%;
+  background: #3a41c6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #3a41c6,
+    #512888
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #3a41c6, #512888);
+  border-radius: 25px;
+}
+.nav_wrapper ul {
+  width: 100%;
+  margin-right: 30px;
+}
+.nav_wrapper ul li {
+  list-style: none;
+  line-height: 3;
+  color: #9d9dff;
+  border-bottom: 1px solid;
+  cursor: pointer !important;
+}
+.nav_wrapper ul li:active {
+  /* list-style: none;
+  line-height: 3;*/
+  color: white;
+  /* border-bottom: 1px solid;  */
+}
+.faqnav.active {
+  color: white;
+  /* text-decoration: underline; */
+}
+.display {
+  width: 75%;
+  padding-right: 50px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid;
+}
+.placeholder {
+  width: 70%;
+}
+.user_info {
+  width: 30%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.circular--landscape img {
+  height: 100%;
+  margin-left: 0px;
+}
+
+.modal {
+  height: 250px;
+  width: 200px;
+  position: absolute;
+}
+.wrap_profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrap_profile button {
+  width: 100px;
+  height: 35px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #fd666a;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+.wrap_profile p {
+  margin: 5px;
+}

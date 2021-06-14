@@ -1,0 +1,102 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* }
+.pattern { */
+  position: relative;
+  background: #3a41c6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #3a41c6,
+    #512888
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #3a41c6, #512888);
+}
+
+.main:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background: url(https://media.geeksforgeeks.org/wp-content/uploads/20200326181026/wave3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card {
+  width: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* margin-top: 120px; */
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
+  border-radius: 20px;
+  height: 500px;
+  /* padding: 0 20px; */
+  margin: 120px 20px 0 20px;
+  background: white;
+  z-index: 9;
+}
+.heading {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #f5f5f5;
+  border-radius: 20px 20px 0 0;
+  padding: 10px 0;
+}
+.heading p {
+  font-size: 18px;
+  font-weight: 600;
+}
+.content {
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.username {
+  text-decoration: none;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 0 20px;
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.user_img {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 10px;
+}
+.user_img img {
+  height: 100%;
+  margin-left: 0px;
+}
+.username p {
+  color: black;
+}
+
+.content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+.content::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+.content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #d3d3d3;
+}
