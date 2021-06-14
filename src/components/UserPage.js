@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import Profile from "./dashboard/Profile";
 import Posts from "./dashboard/posts";
 import Todo from "./dashboard/Todo";
+import User from "./User";
 import Gallery from "./dashboard/Gallery";
 import { USERS } from "./../data/data";
 import Modal from "./Modal";
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import "./UserPage.css";
 
 class UserPage extends Component {
@@ -58,7 +60,15 @@ class UserPage extends Component {
     // let id = this.props.match.params.id;
     let userid = parseInt(this.props.match.params.id);
     userid -= 1;
-
+    let content;
+    content = this.state.data.map((u) => (
+      <Link
+        to={`/users/${u.id}`}
+        style={{ width: "100%", textDecoration: "none" }}
+      >
+        <User key={u.id} user={u} />
+      </Link>
+    ));
     return (
       <div className="Profile">
         <div className="navigation">
@@ -127,6 +137,15 @@ class UserPage extends Component {
                   <p style={{ color: "#A9A9A9", fontSize: "14px" }}>
                     {this.state.data[userid].email}
                   </p>
+                  <div className="users">
+                    <p
+                      onClick={() => {
+                        window.location.reload();
+                      }}
+                    >
+                      {content}
+                    </p>
+                  </div>
                   <a href="/">
                     <button>Logout</button>
                   </a>

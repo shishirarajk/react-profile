@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import { USERS } from "./../../data/data";
+
 import "./Profile.css";
+
 class Profile extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       data: USERS,
       id: this.props.id,
+      visibility: false,
     };
   }
 

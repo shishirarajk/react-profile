@@ -82,8 +82,8 @@
 }
 
 .modal {
-  height: 250px;
-  width: 200px;
+  height: 300px;
+  width: 260px;
   position: absolute;
 }
 .wrap_profile {
@@ -104,4 +104,23 @@
 }
 .wrap_profile p {
   margin: 5px;
+}
+.users {
+  height: 100px;
+  overflow-y: scroll;
+}
+.users::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+.users::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+.users::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #d3d3d3;
 }
